@@ -145,3 +145,11 @@ article.wrap {
 .listingblock pre:not(.highlight) {
     background-color: #b3b3b3;
 }
+
+.label {
+    margin: 0px 2px;
+}
+
+.badge {
+    margin-left: 3px;
+}
