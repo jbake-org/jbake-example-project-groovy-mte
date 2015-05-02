@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jbake Driven Blog</title>
+    <title>${config.blog_title}</title>
     <link rel="stylesheet" href="${config.site_contextPath}css/asciidoctor.css" />
     <link rel="stylesheet" href="${config.site_contextPath}css/foundation.css" />
     <link rel="stylesheet" href="${config.site_contextPath}css/social_foundicons.css" />

@@ -1,12 +1,12 @@
 <% import static groovy.xml.XmlUtil.escapeXml %><?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <title>calmdevelopment</title>
+    <title>${config.blog_title}</title>
     <link href="${config.site_host}${config.site_contextPath}"/>
     <link rel="self" type="application/atom+xml"
           href="${config.site_host}${config.site_contextPath}${config.feed_file}"/>
-    <subtitle>A modern brainswap</subtitle>
+    <subtitle>${config.blog_subtitle}</subtitle>
     <updated>${published_date.format("yyyy-MM-dd'T'HH:mm:ss'Z'")}</updated>
-    <id>tag:calmdevelopment.de,${published_date.format("yyyy:MM")}</id>
+    <id>tag:${config.site_host},${published_date.format("yyyy:MM")}</id>
 
     <%published_posts.each {post -> %>
     <entry>

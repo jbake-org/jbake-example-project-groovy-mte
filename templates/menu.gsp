@@ -2,8 +2,8 @@
     <div class="small-12 large-12 middle-12 small-text-center large-text-center middle-text-center columns">
         <div class="title-box">
             <div class="title-content">
-                <h1>Jbake Driven Blog</h1>
-                <p>Half baked thoughts and other stuff</p>
+                <h1>${config.blog_title}</h1>
+                <p>${config.blog_subtitle}</p>
                 <p class="title-contact">
                     <a href="https://twitter.com/javabake"><i class="foundicon-twitter"></i></a>
                     <a href="https://github.com/jbake-org/jbake"><i class="foundicon-github"></i></a>
