@@ -1,32 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8"/>
-    <title><%if (content.title) {%>${content.title}<% } else { %>JBake<% }%></title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <meta name="keywords" content="">
-    <meta name="generator" content="JBake">
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jbake Driven Blog</title>
+    <link rel="stylesheet" href="${config.site_contextPath}css/asciidoctor.css" />
+    <link rel="stylesheet" href="${config.site_contextPath}css/foundation.css" />
+    <link rel="stylesheet" href="${config.site_contextPath}css/social_foundicons.css" />
+    <link rel="stylesheet" href="${config.site_contextPath}css/prettify.css" />
+    <link rel="stylesheet" href="${config.site_contextPath}css/desert.css" />
+    <link rel="stylesheet" href="${config.site_contextPath}css/app.css" />
 
-    <!-- Le styles -->
-    <link href="<%if (content.rootpath) {%>${content.rootpath}<% } else { %><% }%>css/bootstrap.min.css" rel="stylesheet">
-    <link href="<%if (content.rootpath) {%>${content.rootpath}<% } else { %><% }%>css/asciidoctor.css" rel="stylesheet">
-    <link href="<%if (content.rootpath) {%>${content.rootpath}<% } else { %><% }%>css/base.css" rel="stylesheet">
-    <link href="<%if (content.rootpath) {%>${content.rootpath}<% } else { %><% }%>css/prettify.css" rel="stylesheet">
+    <script src="${config.site_contextPath}js/vendor/modernizr.js"></script>
+    <script src="${config.site_contextPath}js/app.js"></script>
 
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="<%if (content.rootpath) {%>${content.rootpath}<% } else { %><% }%>js/html5shiv.min.js"></script>
-    <![endif]-->
-
-    <!-- Fav and touch icons -->
-    <!--<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">-->
-    <link rel="shortcut icon" href="<%if (content.rootpath) {%>${content.rootpath}<% } else { %><% }%>favicon.ico">
-  </head>
-  <body onload="prettyPrint()">
-    <div id="wrap">
-   
+</head>
+<body class="antialiased" onload="prettyPrint();">

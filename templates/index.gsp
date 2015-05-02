@@ -1,18 +1,60 @@
-<%include "header.gsp"%>
+<% include "header.gsp" %>
+<% include "menu.gsp" %>
+<main>
 
-	<%include "menu.gsp"%>
+    <% published_posts[0..2].each { post -> %>
+    <div class="row">
+        <div class="small-12 middle-12 large-12 columns">
+            <article class="wrap">
+                <header>
+                    <div class="row">
+                        <div class="small-3 medium-1 large-1 columns">
+                            <div class="termin">
+                                <div class="month">${post.date?.format("MMM")}</div>
 
-	<div class="page-header">
-		<h1>Blog</h1>
-	</div>
-	<%published_posts.each {post ->%>
-		<a href="${post.uri}"><h1>${post.title}</h1></a>
-		<p>${post.date.format("dd MMMM yyyy")}</p>
-		<p>${post.body}</p>
-  	<%}%>
-	
-	<hr />
-	
-	<p>Older posts are available in the <a href="/${config.archive_file}">archive</a>.</p>
+                                <div class="date">${post.date?.format("dd")}</div>
 
-<%include "footer.gsp"%>
+                                <div class="year">${post.date?.format("yyyy")}</div>
+                            </div>
+                        </div>
+
+                        <div class="small-9 medium-11 large-11 columns">
+
+                            <div>
+                                <h2><a href="${config.site_contextPath}${post.uri}">${post.title}</a></h2>
+
+                                <p>
+                                    <% 
+                                        def contextPath = "${config.site_contextPath}"
+                                        post.tags.each { tag ->
+                                        tag = tag.trim()
+                                    %>
+                                        <span><a href="${contextPath}tags/${tag.replace(' ','-')}.html" class="label">${tag}</a></span>
+                                    <% } %>
+                                </p>
+                                <hr/>
+
+                            </div>
+                        </div>
+                    </div>
+                </header>
+
+                <div class="row">
+                    <div class="small-9 small-offset-3 medium-11 medium-offset-1 large-11 large-offset-1 columns">
+                        ${post.body}
+                    </div>
+                </div>
+
+            </article>
+        </div>
+    </div>
+    <% } %>
+    <div class="row">
+        <div class="small-12 columns">
+            <hr/>
+            Older post are available in the <a href="${config.site_contextPath}${config.archive_file}">archive</a>
+        </div>
+    </div>
+
+</main>
+<% include "footer.gsp" %>

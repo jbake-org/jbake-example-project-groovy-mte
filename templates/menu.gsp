@@ -1,34 +1,32 @@
-	<!-- Fixed navbar -->
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="<%if (content.rootpath) {%>${content.rootpath}<% } else { %><% }%>">JBake</a>
+<div class="row">
+    <div class="small-12 large-12 middle-12 small-text-center large-text-center middle-text-center columns">
+        <div class="title-box">
+            <div class="title-content">
+                <h1>Jbake Driven Blog</h1>
+                <p>Half baked thoughts and other stuff</p>
+                <p class="title-contact">
+                    <a href="https://twitter.com/javabake"><i class="foundicon-twitter"></i></a>
+                    <a href="https://github.com/jbake-org/jbake"><i class="foundicon-github"></i></a>
+                </p>
+            </div>
         </div>
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="<%if (content.rootpath) {%>${content.rootpath}<% } else { %><% }%>index.html">Home</a></li>
-            <li><a href="<%if (content.rootpath) {%>${content.rootpath}<% } else { %><% }%>about.html">About</a></li>
-            <li><a href="<%if (content.rootpath) {%>${content.rootpath}<% } else { %><% }%>${config.feed_file}">Subscribe</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li class="divider"></li>
-                <li class="dropdown-header">Nav header</li>
-                <li><a href="#">Separated link</a></li>
-                <li><a href="#">One more separated link</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
+        <div class="sticky contain-to-grid">
+            <nav class="top-bar" data-topbar role="navigation">
+                <ul class="title-area">
+                    <li class="name"><!-- No title --></li>
+                    <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+                    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+                </ul>
+
+                <section class="top-bar-section">
+                    <ul class="left">
+                        <li><a href="${config.site_contextPath}index.html">Home</a></li>
+                        <li><a href="${config.site_contextPath}${config.archive_file}">Archive</a></li>
+                        <li><a href="${config.site_contextPath}${config.feed_file}">Subscribe</a></li>
+                    </ul>
+                </section>
+            </nav>
+        </div>
     </div>
-    <div class="container">
+</div>
+

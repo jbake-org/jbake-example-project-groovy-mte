@@ -1,15 +1,22 @@
-<%include "header.gsp"%>
+<% include "header.gsp" %>
+<% include "menu.gsp" %>
+<main>
+    <div class="row">
+        <div class="small-12 columns">
+            <section class="wrap">
+                <header>
+                    <h2>${content.title}</h2>
 
-	<%include "menu.gsp"%>
-	
-	<div class="page-header">
-		<h1>${content.title}</h1>
-	</div>
+                    <time datetime="${content.date.format("yyyy-MM-dd")}">
+                        <small> ${content.date.format("dd.MM.yyyy")} </small>
+                    </time>
 
-	<p><em>${content.date.format("dd MMMM yyyy")}</em></p>
+                    <hr/>
+                </header>
 
-	<p>${content.body}</p>
-
-	<hr />
-
-<%include "footer.gsp"%>
+                ${content.body}
+            </section>
+        </div>
+    </div>
+</main>
+<% include "footer.gsp" %>

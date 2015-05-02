@@ -1,19 +1,20 @@
-		</div>
-		<div id="push"></div>
-    </div>
-    
-    <div id="footer">
-      <div class="container">
-        <p class="muted credit">&copy; 2014 | Mixed with <a href="http://getbootstrap.com/">Bootstrap v3.1.1</a> | Baked with <a href="http://jbake.org">JBake ${version}</a></p>
-      </div>
-    </div>
-    
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="<%if (content.rootpath) {%>${content.rootpath}<% } else { %><% }%>js/jquery-1.11.1.min.js"></script>
-    <script src="<%if (content.rootpath) {%>${content.rootpath}<% } else { %><% }%>js/bootstrap.min.js"></script>
-    <script src="<%if (content.rootpath) {%>${content.rootpath}<% } else { %><% }%>js/prettify.js"></script>
-    
-  </body>
+
+<div class="row">
+<div class="small-12 small-text-center">
+        <p class="muted credit"> 2014 - ${new Date().format("yyyy")} | Mixed with <a href="http://foundation.zurb.com/">Foundation v${config.foundation_version}</a> | Baked with <a href="http://jbake.org">JBake ${version}</a></p>
+</div>
+</div>
+
+<script src="${config.site_contextPath}js/vendor/jquery.js"></script>
+<script src="${config.site_contextPath}js/foundation.min.js"></script>
+<script src="${config.site_contextPath}js/vendor/prettify.js"></script>
+<script>
+    \$(document).foundation();
+        \$(function() {
+                      hljs.tabReplace = "  ";
+                                  hljs.initHighlighting();
+                                          });
+</script>
+
+</body>
 </html>
