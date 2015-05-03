@@ -1,4 +1,5 @@
 layout 'layout/main.tpl', true,
+        projects: projects,
         bodyContents: contents {
 
             published_posts[0..2].each { post ->

@@ -1,0 +1,14 @@
+= Jbake
+Jonathan Bullock
+2015-05-03
+:jbake-type: project
+:jbake-status: published
+:jbake-tags: project,github,java
+:jbake-github: https://github.com/jbake-org/jbake
+:jbake-git: git@github.com:jbake-org/jbake.git
+:jbake-website: http://jbake.org
+:idprefix:
+
+== Description ==
+
+JBake is a Java based open source static site/blog generator for developers.

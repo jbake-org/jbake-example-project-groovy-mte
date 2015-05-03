@@ -1,4 +1,5 @@
 div(class:"row"){
+
     div(class:"small-12 large-12 middle-12 small-text-center large-text-center middle-text-center columns"){
         div(class:"title-box"){
             div(class:"title-content"){
@@ -36,6 +37,18 @@ div(class:"row"){
                         li{
                             a(href:"${config.site_contextPath}${config.archive_file}","Archive")
                         }
+
+                        li(class:"has-dropdown"){
+                            a(href:"#",'Projects')
+                            ul(class:"dropdown"){
+                                projects.each { project ->
+                                    li{
+                                        a(href:"${config.site_contextPath}${project.uri}","${project.doctitle}")
+                                    }
+                                }
+                            }
+                        }
+
                         li{
                             a(href:"${config.site_contextPath}about.html","About")
                         }

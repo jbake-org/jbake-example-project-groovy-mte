@@ -1,0 +1,14 @@
+= JBake Gradle Plugin
+Jonathan Bullock
+2015-05-03
+:jbake-type: project
+:jbake-status: published
+:jbake-tags: project,github,gradle
+:jbake-github: https://github.com/jbake-org/jbake-gradle-plugin
+:jbake-git: git@github.com:jbake-org/jbake-gradle-plugin.git
+:jbake-website: http://jbake.org
+:idprefix:
+
+== Description ==
+
+This plugin allows rendering a site using JBake directly from Gradle.
