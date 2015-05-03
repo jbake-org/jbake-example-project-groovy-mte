@@ -37,6 +37,9 @@ div(class:"row"){
                             a(href:"${config.site_contextPath}${config.archive_file}","Archive")
                         }
                         li{
+                            a(href:"${config.site_contextPath}about.html","About")
+                        }
+                        li{
                             a(href:"${config.site_contextPath}${config.feed_file}","Subscribe")
                         }
                     }
