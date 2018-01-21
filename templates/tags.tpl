@@ -14,7 +14,7 @@ layout 'layout/main.tpl', true,
                                         tag = tag.trim()
                                         def postsCount = posts.findAll { post ->
                                             post.status == "published" &&
-                                                    post.tags.contains(tag)
+                                                    post.tags?.contains(tag)
                                         }.size()
 
                                         span{
