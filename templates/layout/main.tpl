@@ -9,8 +9,8 @@ html(lang:'en'){
 
         include template: 'menu.tpl'
 
-        main {
-            bodyContents()
+        div {
+          bodyContents()
         }
         newLine()
         include template: 'footer.tpl'
